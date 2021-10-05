@@ -1,17 +1,108 @@
 @import "../main.scss";
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
-.logo {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
+.main-container {
+  display: flex;
+  height: auto;
+  padding: 0;
+  justify-content: space-around;
+}
+
+.container {
+  background-color: whitesmoke;
+  border: solid;
   margin: 10px;
   display: flex;
   flex-direction: row;
-  background-color: $light-color;
   color: $dark-color;
   font-size: smaller;
   padding: 10px;
-  margin: 20px 100px;
+  margin: 20px 0;
+  justify-content: center;
+  height: 350px;
+  width: 900px;
+  border-radius: 20px;
+}
+
+.joke-body {
+    text-align: center;
+}
+
+.joke-body .joke {
+    font-family: "VAG Rounded W02 Bold","Arial Rounded MT Bold","Arial Rounded MT","Arial Rounded";
+    padding: 0 20px;
+    font-size: 18px;
+    word-break: break-all;
+}
+
+.joke-container .joke-button {
+  border: 3px solid $primary-color;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: $secondary-color;
+  color: $primary-color;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.joke-container .joke-button:hover {
+  color: $light-color;
+  background-color: $primary-color;
+  border-color: $secondary-color;
+}
+
+.joke-container {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  height: 500px;
+  padding: 60px 60px 60px 0;
+}
+
+.categorie {
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    padding: 5px;
+}
+
+.loader {
+  align-self: center;  
+  border: 16px solid $light-color;
+  border-radius: 50%;
+  border-top: 16px solid $secondary-color;
+  border-bottom: 16px solid $secondary-color;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  -webkit-animation: spin 2s linear infinite;
+  margin: 20px;
+}
+
+.chuck-image {
+  padding: 40px 0 0 0;
+  height: 15px;
+  height: 150px;
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+  .container {
+      height: auto;
+      width: auto;
+  }
+  .joke-container {
+      padding: 0 0 10px 0;
+  }
+  .image-placeholder {
+      width: 50%;
+  }
 }

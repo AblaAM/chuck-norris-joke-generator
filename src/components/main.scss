@@ -1,26 +1,71 @@
-$primary-color: #004c3f ;
-$secondary-color: #f3fcf4;
+$primary-color: black ;
+$secondary-color: #f15b23;
 $light-color: white;
 $dark-color: black;
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.title {
-  border: 3px solid $secondary-color;
-  padding: 30px;
-  border-radius: 8px;
-  background-color: $secondary-color;
-  color: $primary-color;
-}
-
-.title-container {
+.app-container {
+  margin: 0 100px;
   display: flex;
-  justify-content: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.heading {
+  text-align: center;
+  padding: 10px 40px;
+  color: $secondary-color;
+}
+
+.main-heading > .heading {
+  font-size: 30px;
+  color: $secondary-color;
+  margin-left: 160px;
+}
+
+.main-heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.select {
+  cursor: pointer;
+  position: relative;
+  font-family: Arial;
+  background-color: $secondary-color;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+}
+
+.select:hover {
+  background-color: $primary-color;
+  color: $light-color;
+  border-color: $secondary-color;
+}
+
+.select-container {
+  padding: 10px 0;
+}
+
+
+@media (max-width: 1024px) {
+  .app-container {
+    margin: 0 50px
+  }
+}
+
+
+@media (max-width: 768px) {
+  .app-container {
+    margin: 0 10px;
+  }
+  .main-heading > .heading {
+  display: none;
+  }
+  .custom-select {
+  padding: 20px 0 0 0;
+  }
+  .main-heading{
+    justify-content: end;
+  } 
 }
