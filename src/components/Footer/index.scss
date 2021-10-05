@@ -2,48 +2,9 @@
 @import '../main.scss';
 
 .footer {
-  position: relative;
-  left: 0;
-  bottom: 0;
-  background-color: $primary-color;
-  color: $light-color;
-  margin: 0 100px;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  text-align: end;
-}
-
-.footer-links {
-  padding: 10px 0 0 0;
-  .social {
-    padding: 0 10px 0 0;
-    font-size: small;
-    &:last-child {
-      padding: 0 40px 0 0;
-    }
-  }
-  a {
-    color: $light-color;
-    text-decoration: none;
-    &:hover {
-      text-decoration: underline;
-    }
-    &:active {
-      text-decoration: underline;
-    }
-  }
-}
-
-.copyright {
-  float: right;
-  margin: 0;
-  padding: 15px 40px;
-  font-size: x-small;
-}
-
-@media screen and (max-width: 768px) {
-  .footer {
-    margin: 0;
-  }
+  font-size: small;
+  font-weight: 600;
+  color: $primary-color;
+  text-align: center;
+  margin-top: auto;
 }
